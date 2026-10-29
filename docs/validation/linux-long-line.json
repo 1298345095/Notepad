@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "platform": "Linux",
+  "wx_version": "3.2.4",
+  "utf8_bytes": 10485760,
+  "lines": 2,
+  "large_file_mode": false,
+  "language": "Plain text",
+  "load_and_style_ms": 3291.811,
+  "load_through_first_paint_ms": 3523.565,
+  "append_and_undo_ms": 2.725,
+  "peak_rss_kib": 157744,
+  "notes": "Single run in this environment; not cold-start or input-latency measurement. Peak RSS includes GUI initialization and file loading."
+}

@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "platform": "Linux",
+  "wx_version": "3.2.4",
+  "screenshot": true,
+  "checks": [
+    "UTF-16 LE load, Chinese/emoji, CRLF and clean save point",
+    "Unicode forward/backward find, replace-all, grouped undo and redo",
+    "UTF-16 BE save and independent byte round trip",
+    "Rejected binary input preserves the existing document",
+    "External file changes detected before save",
+    "Save/discard/cancel prompts and reopening the same modified file",
+    "New document resets history; whole-word and case-sensitive replacement",
+    "Edit menu follows search-field focus without changing the document",
+    "Real Notepad4 Diff rules integrated into Scintilla styles and fold levels",
+    "Diff folds converge after changing or deleting adjacent headers",
+    "C++ highlighting, dark editor, zoom and word wrap"
+  ],
+  "error": ""
+}

@@ -1,0 +1,13 @@
+/build*/
+/out/
+/stage/
+/dist/
+/_CPack_Packages/
+/fixtures/
+/smoke*.json
+/smoke*.png
+/benchmark*.json
+*.user
+.DS_Store
+__pycache__/
+*.pyc
