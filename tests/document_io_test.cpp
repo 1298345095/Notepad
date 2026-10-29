@@ -260,7 +260,7 @@ void TestSaveFailuresAndPermissions(const fs::path& directory) {
 #endif
 
     for (const auto& entry : fs::directory_iterator(directory)) {
-        Check(!entry.path().filename().string().starts_with(".notepad-save-"),
+        Check(!entry.path().filename().u8string().starts_with(u8".notepad-save-"),
               "Temporary save file leaked");
     }
 }
