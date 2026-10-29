@@ -316,7 +316,7 @@ bool MainFrame::IsModified() const { return formatChanged_ || editor_->GetModify
 
 bool MainFrame::ConfirmChanges() {
     if (!IsModified()) return true;
-    const wxString name = path_.empty() ? "Untitled" : wxFileName(path_).GetFullName();
+    const wxString name = path_.empty() ? wxString("Untitled") : wxFileName(path_).GetFullName();
     const int answer = savePrompt_ ? savePrompt_(name) : automated_ ? wxNO
         : wxMessageBox("Save changes to " + name + "?", "Unsaved changes", wxYES_NO | wxCANCEL | wxICON_QUESTION, this);
     if (answer == wxCANCEL) return false;
@@ -428,7 +428,7 @@ void MainFrame::OpenDialog() {
 bool MainFrame::Save(bool saveAs) {
     if (!saveAs && !path_.empty()) return SavePath(path_);
     wxFileDialog dialog(this, "Save document", path_.empty() ? wxString{} : wxFileName(path_).GetPath(),
-        path_.empty() ? "Untitled.txt" : wxFileName(path_).GetFullName(), "All files|*", wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
+        path_.empty() ? wxString("Untitled.txt") : wxFileName(path_).GetFullName(), "All files|*", wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
     return dialog.ShowModal() == wxID_OK && SavePath(dialog.GetPath());
 }
 
@@ -563,7 +563,7 @@ void MainFrame::GoToLine() {
 }
 
 void MainFrame::UpdateTitle() {
-    const wxString name = path_.empty() ? "Untitled" : wxFileName(path_).GetFullName();
+    const wxString name = path_.empty() ? wxString("Untitled") : wxFileName(path_).GetFullName();
     SetTitle((IsModified() ? "* " : "") + name + " - Notepad");
 }
 
